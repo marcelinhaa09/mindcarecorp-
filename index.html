@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="desconhecido">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MIND CARE</title>
+</head>
+<body id="top">
+
+    <div class="container">
+        <!-- Seção "Home" apenas decorativa -->
+        <div class="main" id="section-home">
+            <ul class="nav">
+                <li><a href="#section-home" class="active">Home</a></li>
+                <li><a href="#section-about">Sobre</a></li>
+                <li><a href="#section-services">Serviços</a></li>
+                <li><a href="#section-contact">Contato</a></li>
+            </ul>
+
+            <div class="image-container">
+                <img src="1.png" alt="Descrição da Imagem">
+            </div>
+        </div>
+
+        <!-- Seção "Sobre" -->
+        <div class="main" id="section-about">
+            <div class="image-container">
+                <img src="2.png" alt="Descrição da Imagem">
+            </div>
+            <a href="#section-services">Próxima sessão: Serviços</a>
+            <br>
+            <a href="#top">Voltar ao Início</a>
+        </div>
+
+        <!-- Seção "Serviços" -->
+        <div class="main" id="section-services">
+            <div class="image-container">
+                <img src="3.png" alt="Descrição da Imagem">
+            </div>
+            <a href="#section-contact">Próxima sessão: Contato</a>
+            <br>
+            <a href="#top">Voltar ao Início</a>
+        </div>
+
+        <!-- Seção "Contato" -->
+        <div class="main" id="section-contact">
+            <div class="image-container">
+                <img src="4.png" alt="Descrição da Imagem">
+            </div>
+            <a href="#top">Voltar ao Início</a>
+            <br>
+            <a href="#end">Formulário para contato</a>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <div class="container form-container">
+            <h2>Formulário de Contato</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Endereço:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.reset();
+            });
+        </script>
+
+        <br><br>
+        <center>
+            <div style="background-color: #b4e4dd; width: 20%; height: 25px;">
+                <a href="#top">Voltar ao Início</a>
+            </div>
+        </center>
+    </div>
+
+    <div id="end"></div> <!-- Div com ID 'end', utilizada para navegação -->
+
+</body>
+</html>

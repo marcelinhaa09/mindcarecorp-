@@ -1,0 +1,170 @@
+html {                             
+    scroll-behavior: smooth;     
+    
+    font-family: 'Arial', sans-serif; 
+}
+
+/* Variáveis de Cores */
+:root {
+    --primary-color: #5349a4;
+    --secondary-color: #b4e4dd;
+    --background-dark: #080808;
+    --background-light: #ffffff;
+    --highlight-color: #b4e4dd;
+}
+
+body {
+    background-color: hsl(269, 63%, 87%);  /* Cor lilás escolhida como fundo */
+    color: var(--background-light); 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--background-light);
+    text-align: center;
+    padding-top: 3%;
+}
+
+/* Barra de navegação fixada sobre a imagem */
+.nav {
+    background-color: var(--primary-color);
+    list-style-type: none;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: absolute; /* Posiciona a barra acima da imagem */
+    top: 220px; /* Distância do topo da tela */
+    left: 0;
+    right: 0;
+}
+
+.nav li {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.nav li a {
+    color: var(--background-light);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav li a:hover {
+    background-color: var(--secondary-color);
+}
+
+.main {
+    height: 600px;
+    background-color: var(--highlight-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: var(--background-light);
+}
+
+.main a {
+    color: var(--background-dark);
+}
+
+.main a:hover {
+    color: #7d095c;
+    font-style: oblique;
+}
+
+h2 {
+    color: var(--background-light);
+    margin-bottom: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 100%; /* A imagem agora ocupa 100% da largura do container */
+    max-width: 25cm; /* A largura máxima da imagem será de 26cm */
+    max-height: 18cm; /* A altura máxima da imagem será de 14cm */
+    object-fit: cover; /* Mantém a proporção da imagem e a preenche sem distorcer */
+    border-radius: 8px; /* Adiciona cantos arredondados à imagem */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
+
+@media (max-width: 768px) {
+    .image-container img {
+        max-width: 20cm; /* Reduz o tamanho da imagem em dispositivos médios */
+        max-height: 10cm; /* Reduz a altura da imagem para se ajustar melhor */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container img {
+        max-width: 16cm; /* Reduz ainda mais o tamanho em telas pequenas */
+        max-height: 8cm; /* Ajusta a altura também */
+    }
+}
+
+.form-container {
+    background-color: #5349a4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 30cm;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+    color: var(--background-light);
+}
+
+input[type="text"], 
+input[type="tel"], 
+input[type="email"] {
+    padding: 10px;
+    width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black
+}
+
+input[type="submit"] {
+    background-color: #5349a4;
+    color: var(--background-light);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #b4e4dd;
+}
+
+.return-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.return {
+    color: var(--background-light);
+    text-decoration: underline;
+}
